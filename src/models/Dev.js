@@ -1,16 +1,16 @@
-const { Schema, model } = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 const DevSchema = new Schema({
-    name: {
-       type: String,
-       required: true,
+    name:{
+        type: String,
+        required: true,
     },
     user:{
         type: String,
         required: true,
     },
     bio: String,
-    avatar: {
+    avatar:{
         type: String,
         required: true,
     },
@@ -23,7 +23,7 @@ const DevSchema = new Schema({
         ref: 'Dev',
     }],
 }, {
-    timestamps: true,   
+    timestamps: true,
 })
 
 module.exports = model('Dev', DevSchema);
